@@ -6,7 +6,67 @@
     <title>Tailwind</title>
     <link rel="stylesheet" href="/dist/style.css" />
 </head>
-<body class="bg-amber-50">
-    <div class="p-4 bg-indigo-600 text-white"> PostCSS</div>
+<body >
+    <div class="p-4 bg-black text-white"> PostCSS</div>
+    <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">Default</button>
+    <button class="btn bg-white text-black border-[#e5e5e5]">
+        <svg aria-label="Email icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="black"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></g></svg>
+        Login with Email
+    </button>
+    <div class="dropdown dropdown-hover">
+        <div tabindex="0" role="button" class="btn m-1">Hover</div>
+        <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+          <li><a>Item 1</a></li>
+          <li><a>Item 2</a></li>
+        </ul>
+      </div>
+      <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
+<dialog id="my_modal_1" class="modal">
+  <div class="modal-box">
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+<label class="flex cursor-pointer gap-2">
+    <span class="label-text">Current</span>
+    <input type="checkbox" value="synthwave" class="toggle theme-controller" />
+    <span class="label-text">Synthwave</span>
+  </label>
+  <input type="checkbox" value="synthwave" class="toggle theme-controller" />
+  <div class="collapse bg-base-100 border border-base-300">
+    <input type="radio" name="my-accordion-1" checked="checked" />
+    <div class="collapse-title font-semibold">How do I create an account?</div>
+    <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
+  </div>
+  <div class="collapse bg-base-100 border border-base-300">
+    <input type="radio" name="my-accordion-1" />
+    <div class="collapse-title font-semibold">I forgot my password. What should I do?</div>
+    <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
+  </div>
+  <div class="collapse bg-base-100 border border-base-300">
+    <input type="radio" name="my-accordion-1" />
+    <div class="collapse-title font-semibold">How do I update my profile information?</div>
+    <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+  </div>
+  <div class="card bg-base-100 w-96 shadow-sm">
+    <figure>
+      <img
+        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+        alt="Shoes" />
+    </figure>
+    <div class="card-body">
+      <h2 class="card-title">Card Title</h2>
+      <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+      <div class="card-actions justify-end">
+        <button class="btn btn-primary">Buy Now</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
